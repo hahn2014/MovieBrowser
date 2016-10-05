@@ -1,0 +1,25 @@
+c:\users\bryce\desktop\Movie Browser\Movie Browser\bin\Debug\Movie Browser.exe.config
+c:\users\bryce\desktop\Movie Browser\Movie Browser\bin\Debug\Movie Browser.exe
+c:\users\bryce\desktop\Movie Browser\Movie Browser\bin\Debug\Movie Browser.pdb
+c:\users\bryce\desktop\Movie Browser\Movie Browser\bin\Debug\Movie Browser.xml
+c:\users\bryce\desktop\Movie Browser\Movie Browser\obj\Debug\Movie_Browser.Form1.resources
+c:\users\bryce\desktop\Movie Browser\Movie Browser\obj\Debug\Movie_Browser.Resources.resources
+c:\users\bryce\desktop\Movie Browser\Movie Browser\obj\Debug\Movie Browser.vbproj.GenerateResource.Cache
+c:\users\bryce\desktop\Movie Browser\Movie Browser\obj\Debug\Movie Browser.exe
+c:\users\bryce\desktop\Movie Browser\Movie Browser\obj\Debug\Movie Browser.xml
+c:\users\bryce\desktop\Movie Browser\Movie Browser\obj\Debug\Movie Browser.pdb
+C:\Users\Bryce\Desktop\Movie Browser\Movie Browser\bin\Debug\Interop.MSVidCtlLib.dll
+C:\Users\Bryce\Desktop\Movie Browser\Movie Browser\bin\Debug\AxInterop.MSVidCtlLib.dll
+C:\Users\Bryce\Desktop\Movie Browser\Movie Browser\obj\Debug\Interop.MSVidCtlLib.dll
+C:\Users\Bryce\Desktop\Movie Browser\Movie Browser\obj\Debug\AxInterop.MSVidCtlLib.dll
+C:\Users\Bryce\Desktop\Movie Browser\Movie Browser\obj\Debug\Movie Browser.vbproj.ResolveComReference.cache
+C:\Users\Bryce\Desktop\Movie Browser\Movie Browser\obj\Debug\Movie_Browser.VideoPlayer.resources
+C:\Users\Bryce\Desktop\Movie Browser\Movie Browser\obj\Debug\Interop.WMPLib.dll
+C:\Users\Bryce\Desktop\Movie Browser\Movie Browser\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Bryce\Desktop\Movie Browser\Movie Browser\bin\Debug\Interop.WMPLib.dll
+C:\Users\Bryce\Desktop\Movie Browser\Movie Browser\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Bryce\Desktop\Movie Browser\Movie Browser\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Bryce\Desktop\Movie Browser\Movie Browser\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Bryce\Desktop\Movie Browser\Movie Browser\obj\Debug\Movie Browser.vbprojResolveAssemblyReference.cache
+C:\Users\Bryce\Desktop\Movie Browser\Movie Browser\obj\Debug\Movie_Browser.AddMovie.resources
+C:\Users\Bryce\Desktop\Movie Browser\Movie Browser\obj\Debug\Movie_Browser.UpdateData.resources
