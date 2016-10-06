@@ -172,6 +172,7 @@ Public Class UpdateData
         'test to see if the user presses the ok button
         If directoryUpdater.ShowDialog() = Windows.Forms.DialogResult.OK Then
             LocationLabel.Text = directoryUpdater.FileName
+            movieFile = LocationLabel.Text
             'movieFileS = System.IO.Path.GetFileName(directoryUpdater.FileName).Substring(0, System.IO.Path.GetFileName(directoryUpdater.FileName).Length - 4)
         Else
             LocationLabel.Text = "null"
