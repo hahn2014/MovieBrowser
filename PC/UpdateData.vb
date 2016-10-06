@@ -18,6 +18,7 @@ Public Class UpdateData
         Loop
         reader.Close()
 
+        LocationLabel.Text = file
         titleTB.Text = allLines(1)
         imdbIDBox.Text = allLines(2)
         yearTB.Text = allLines(3)
@@ -141,9 +142,13 @@ Public Class UpdateData
     End Sub
 
     Private Sub UpdateBTN_Click(sender As Object, e As EventArgs) Handles UpdateBTN.Click
-        File.WriteAllText(Form1.locationForData + fileURL + ".data", movieFile + vbNewLine + titleTB.Text + vbNewLine + imdbIDBox.Text + vbNewLine + yearTB.Text + vbNewLine + GenreBox.SelectedItem + vbNewLine +
-                              seriesTitleTB.Text + vbNewLine + seriesIterationTB.Text + vbNewLine + PlayCountBox.Text + vbNewLine + hourBox.Text + ":" + minBox.Text + ":" + secBox.Text)
-        CancleBTN.PerformClick()
+        If (titleTB.Text = "" Or GenreBox.Text = "" Or yearTB.Text = "" Or imdbIDBox.Text = "" Or LocationLabel.Text = "null") Then
+
+        Else
+            File.WriteAllText(Form1.locationForData + fileURL + ".data", movieFile + vbNewLine + titleTB.Text + vbNewLine + imdbIDBox.Text + vbNewLine + yearTB.Text + vbNewLine + GenreBox.SelectedItem + vbNewLine +
+                                  seriesTitleTB.Text + vbNewLine + seriesIterationTB.Text + vbNewLine + PlayCountBox.Text + vbNewLine + hourBox.Text + ":" + minBox.Text + ":" + secBox.Text)
+            CancleBTN.PerformClick()
+        End If
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
@@ -160,5 +165,16 @@ Public Class UpdateData
 
     Private Sub UpdateData_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Timer1.Start()
+    End Sub
+
+    Private Sub ChangeFile_Click(sender As Object, e As EventArgs) Handles ChangeFile.Click
+        directoryUpdater.Title = "Choose which movie file to add or replace"
+        'test to see if the user presses the ok button
+        If directoryUpdater.ShowDialog() = Windows.Forms.DialogResult.OK Then
+            LocationLabel.Text = directoryUpdater.FileName
+            'movieFileS = System.IO.Path.GetFileName(directoryUpdater.FileName).Substring(0, System.IO.Path.GetFileName(directoryUpdater.FileName).Length - 4)
+        Else
+            LocationLabel.Text = "null"
+        End If
     End Sub
 End Class

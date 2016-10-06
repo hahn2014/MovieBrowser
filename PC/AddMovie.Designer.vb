@@ -52,27 +52,30 @@ Partial Class AddMovie
         '
         'LoadFileBTN
         '
-        Me.LoadFileBTN.Location = New System.Drawing.Point(125, 12)
+        Me.LoadFileBTN.Location = New System.Drawing.Point(188, 18)
+        Me.LoadFileBTN.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.LoadFileBTN.Name = "LoadFileBTN"
-        Me.LoadFileBTN.Size = New System.Drawing.Size(105, 23)
+        Me.LoadFileBTN.Size = New System.Drawing.Size(158, 35)
         Me.LoadFileBTN.TabIndex = 0
         Me.LoadFileBTN.Text = "Load File"
         Me.LoadFileBTN.UseVisualStyleBackColor = True
         '
         'dirTextField
         '
-        Me.dirTextField.Location = New System.Drawing.Point(236, 13)
+        Me.dirTextField.Location = New System.Drawing.Point(354, 20)
+        Me.dirTextField.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.dirTextField.Name = "dirTextField"
-        Me.dirTextField.Size = New System.Drawing.Size(475, 20)
+        Me.dirTextField.Size = New System.Drawing.Size(710, 26)
         Me.dirTextField.TabIndex = 1
         '
         'addMovieBTN
         '
         Me.addMovieBTN.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.addMovieBTN.Enabled = False
-        Me.addMovieBTN.Location = New System.Drawing.Point(555, 155)
+        Me.addMovieBTN.Location = New System.Drawing.Point(832, 238)
+        Me.addMovieBTN.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.addMovieBTN.Name = "addMovieBTN"
-        Me.addMovieBTN.Size = New System.Drawing.Size(75, 23)
+        Me.addMovieBTN.Size = New System.Drawing.Size(112, 35)
         Me.addMovieBTN.TabIndex = 2
         Me.addMovieBTN.Text = "Add Movie"
         Me.addMovieBTN.UseVisualStyleBackColor = True
@@ -80,9 +83,10 @@ Partial Class AddMovie
         'Button2
         '
         Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button2.Location = New System.Drawing.Point(636, 155)
+        Me.Button2.Location = New System.Drawing.Point(954, 238)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.Size = New System.Drawing.Size(112, 35)
         Me.Button2.TabIndex = 3
         Me.Button2.Text = "Cancle"
         Me.Button2.UseVisualStyleBackColor = True
@@ -112,24 +116,27 @@ Partial Class AddMovie
         Me.detailsPanel.Controls.Add(Me.Label1)
         Me.detailsPanel.Controls.Add(Me.titleTB)
         Me.detailsPanel.Enabled = False
-        Me.detailsPanel.Location = New System.Drawing.Point(13, 43)
+        Me.detailsPanel.Location = New System.Drawing.Point(20, 66)
+        Me.detailsPanel.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.detailsPanel.Name = "detailsPanel"
-        Me.detailsPanel.Size = New System.Drawing.Size(698, 106)
+        Me.detailsPanel.Size = New System.Drawing.Size(1047, 163)
         Me.detailsPanel.TabIndex = 4
         '
         'imdbIDBox
         '
-        Me.imdbIDBox.Location = New System.Drawing.Point(440, 77)
+        Me.imdbIDBox.Location = New System.Drawing.Point(660, 118)
+        Me.imdbIDBox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.imdbIDBox.Name = "imdbIDBox"
         Me.imdbIDBox.ReadOnly = True
-        Me.imdbIDBox.Size = New System.Drawing.Size(157, 20)
+        Me.imdbIDBox.Size = New System.Drawing.Size(234, 26)
         Me.imdbIDBox.TabIndex = 14
         '
         'imdbBTN
         '
-        Me.imdbBTN.Location = New System.Drawing.Point(349, 75)
+        Me.imdbBTN.Location = New System.Drawing.Point(524, 115)
+        Me.imdbBTN.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.imdbBTN.Name = "imdbBTN"
-        Me.imdbBTN.Size = New System.Drawing.Size(85, 23)
+        Me.imdbBTN.Size = New System.Drawing.Size(128, 35)
         Me.imdbBTN.TabIndex = 13
         Me.imdbBTN.Text = "Get IMDB ID"
         Me.imdbBTN.UseVisualStyleBackColor = True
@@ -138,59 +145,66 @@ Partial Class AddMovie
         '
         Me.GenreBox.FormattingEnabled = True
         Me.GenreBox.Items.AddRange(New Object() {"Action", "Adventure", "Animation", "Biography", "Comedy", "Crime", "Documentary", "Drama", "Family", "Fantasy", "Film-Noir", "Historic", "Horror", "Musical", "Mystery", "Romance", "Sci-Fi", "Sport", "Thriller", "War", "Western"})
-        Me.GenreBox.Location = New System.Drawing.Point(430, 26)
+        Me.GenreBox.Location = New System.Drawing.Point(645, 40)
+        Me.GenreBox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.GenreBox.Name = "GenreBox"
-        Me.GenreBox.Size = New System.Drawing.Size(183, 21)
+        Me.GenreBox.Size = New System.Drawing.Size(272, 28)
         Me.GenreBox.TabIndex = 12
         '
         'seriesTitleTB
         '
-        Me.seriesTitleTB.Location = New System.Drawing.Point(3, 78)
+        Me.seriesTitleTB.Location = New System.Drawing.Point(4, 120)
+        Me.seriesTitleTB.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.seriesTitleTB.Name = "seriesTitleTB"
-        Me.seriesTitleTB.Size = New System.Drawing.Size(191, 20)
+        Me.seriesTitleTB.Size = New System.Drawing.Size(284, 26)
         Me.seriesTitleTB.TabIndex = 11
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(1, 62)
+        Me.Label5.Location = New System.Drawing.Point(2, 95)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(59, 13)
+        Me.Label5.Size = New System.Drawing.Size(87, 20)
         Me.Label5.TabIndex = 10
         Me.Label5.Text = "Series Title"
         '
         'yearTB
         '
-        Me.yearTB.Location = New System.Drawing.Point(619, 28)
+        Me.yearTB.Location = New System.Drawing.Point(928, 43)
+        Me.yearTB.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.yearTB.MaxLength = 4
         Me.yearTB.Name = "yearTB"
-        Me.yearTB.Size = New System.Drawing.Size(68, 20)
+        Me.yearTB.Size = New System.Drawing.Size(100, 26)
         Me.yearTB.TabIndex = 9
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(616, 12)
+        Me.Label4.Location = New System.Drawing.Point(924, 18)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(71, 13)
+        Me.Label4.Size = New System.Drawing.Size(106, 20)
         Me.Label4.TabIndex = 8
         Me.Label4.Text = "Release Year"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(427, 12)
+        Me.Label3.Location = New System.Drawing.Point(640, 18)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(36, 13)
+        Me.Label3.Size = New System.Drawing.Size(54, 20)
         Me.Label3.TabIndex = 6
         Me.Label3.Text = "Genre"
         '
         'addBTN
         '
         Me.addBTN.Enabled = False
-        Me.addBTN.Location = New System.Drawing.Point(297, 76)
+        Me.addBTN.Location = New System.Drawing.Point(446, 117)
+        Me.addBTN.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.addBTN.Name = "addBTN"
-        Me.addBTN.Size = New System.Drawing.Size(23, 21)
+        Me.addBTN.Size = New System.Drawing.Size(34, 32)
         Me.addBTN.TabIndex = 5
         Me.addBTN.Text = "+"
         Me.addBTN.UseVisualStyleBackColor = True
@@ -198,9 +212,10 @@ Partial Class AddMovie
         'subtractBTN
         '
         Me.subtractBTN.Enabled = False
-        Me.subtractBTN.Location = New System.Drawing.Point(267, 77)
+        Me.subtractBTN.Location = New System.Drawing.Point(400, 118)
+        Me.subtractBTN.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.subtractBTN.Name = "subtractBTN"
-        Me.subtractBTN.Size = New System.Drawing.Size(24, 20)
+        Me.subtractBTN.Size = New System.Drawing.Size(36, 31)
         Me.subtractBTN.TabIndex = 4
         Me.subtractBTN.Text = "-"
         Me.subtractBTN.UseVisualStyleBackColor = True
@@ -208,11 +223,12 @@ Partial Class AddMovie
         'seriesIterationTB
         '
         Me.seriesIterationTB.Enabled = False
-        Me.seriesIterationTB.Location = New System.Drawing.Point(203, 77)
+        Me.seriesIterationTB.Location = New System.Drawing.Point(304, 118)
+        Me.seriesIterationTB.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.seriesIterationTB.MaxLength = 2
         Me.seriesIterationTB.Name = "seriesIterationTB"
         Me.seriesIterationTB.ReadOnly = True
-        Me.seriesIterationTB.Size = New System.Drawing.Size(58, 20)
+        Me.seriesIterationTB.Size = New System.Drawing.Size(85, 26)
         Me.seriesIterationTB.TabIndex = 3
         Me.seriesIterationTB.Text = "1"
         Me.seriesIterationTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -220,26 +236,29 @@ Partial Class AddMovie
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(200, 61)
+        Me.Label2.Location = New System.Drawing.Point(300, 94)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(109, 13)
+        Me.Label2.Size = New System.Drawing.Size(162, 20)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Movie Series Iteration" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(3, 12)
+        Me.Label1.Location = New System.Drawing.Point(4, 18)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(59, 13)
+        Me.Label1.Size = New System.Drawing.Size(83, 20)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Movie Title"
         '
         'titleTB
         '
-        Me.titleTB.Location = New System.Drawing.Point(4, 28)
+        Me.titleTB.Location = New System.Drawing.Point(6, 43)
+        Me.titleTB.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.titleTB.Name = "titleTB"
-        Me.titleTB.Size = New System.Drawing.Size(420, 20)
+        Me.titleTB.Size = New System.Drawing.Size(628, 26)
         Me.titleTB.TabIndex = 0
         '
         'Timer1
@@ -252,9 +271,10 @@ Partial Class AddMovie
         Me.FileOnComputerCB.BackColor = System.Drawing.Color.Transparent
         Me.FileOnComputerCB.Checked = True
         Me.FileOnComputerCB.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.FileOnComputerCB.Location = New System.Drawing.Point(12, 16)
+        Me.FileOnComputerCB.Location = New System.Drawing.Point(18, 25)
+        Me.FileOnComputerCB.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.FileOnComputerCB.Name = "FileOnComputerCB"
-        Me.FileOnComputerCB.Size = New System.Drawing.Size(107, 17)
+        Me.FileOnComputerCB.Size = New System.Drawing.Size(159, 24)
         Me.FileOnComputerCB.TabIndex = 5
         Me.FileOnComputerCB.Text = "File On Computer"
         Me.FileOnComputerCB.UseVisualStyleBackColor = False
@@ -262,18 +282,18 @@ Partial Class AddMovie
         'urlTextFieldLB
         '
         Me.urlTextFieldLB.AutoSize = True
-        Me.urlTextFieldLB.Location = New System.Drawing.Point(233, 0)
+        Me.urlTextFieldLB.Location = New System.Drawing.Point(350, 0)
         Me.urlTextFieldLB.Margin = New System.Windows.Forms.Padding(0)
         Me.urlTextFieldLB.Name = "urlTextFieldLB"
-        Me.urlTextFieldLB.Size = New System.Drawing.Size(175, 13)
+        Me.urlTextFieldLB.Size = New System.Drawing.Size(258, 20)
         Me.urlTextFieldLB.TabIndex = 6
         Me.urlTextFieldLB.Text = "Directory On Local Drive (Required)"
         '
         'AddMovie
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(723, 190)
+        Me.ClientSize = New System.Drawing.Size(1076, 266)
         Me.ControlBox = False
         Me.Controls.Add(Me.urlTextFieldLB)
         Me.Controls.Add(Me.FileOnComputerCB)
@@ -283,10 +303,11 @@ Partial Class AddMovie
         Me.Controls.Add(Me.dirTextField)
         Me.Controls.Add(Me.LoadFileBTN)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(739, 229)
+        Me.MaximumSize = New System.Drawing.Size(1098, 322)
         Me.MinimizeBox = False
-        Me.MinimumSize = New System.Drawing.Size(739, 229)
+        Me.MinimumSize = New System.Drawing.Size(1098, 322)
         Me.Name = "AddMovie"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Add New Movie To List"
