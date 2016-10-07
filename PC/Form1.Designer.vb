@@ -41,6 +41,7 @@ Partial Class Form1
         Me.Button2 = New System.Windows.Forms.Button()
         Me.SearchBackButton = New System.Windows.Forms.Button()
         Me.AddMovieFile = New System.Windows.Forms.Button()
+        Me.TreeListData = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.MovieDetailsPanel.SuspendLayout()
         CType(Me.MovieImageBox, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -49,10 +50,9 @@ Partial Class Form1
         'Button1
         '
         Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button1.Location = New System.Drawing.Point(189, 7)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(2)
+        Me.Button1.Location = New System.Drawing.Point(284, 11)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(50, 27)
+        Me.Button1.Size = New System.Drawing.Size(75, 42)
         Me.Button1.TabIndex = 0
         Me.Button1.Text = "Search"
         Me.Button1.UseVisualStyleBackColor = True
@@ -60,11 +60,10 @@ Partial Class Form1
         'SearchBox
         '
         Me.SearchBox.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.SearchBox.Location = New System.Drawing.Point(14, 10)
-        Me.SearchBox.Margin = New System.Windows.Forms.Padding(2)
+        Me.SearchBox.Location = New System.Drawing.Point(21, 15)
         Me.SearchBox.MaxLength = 26
         Me.SearchBox.Name = "SearchBox"
-        Me.SearchBox.Size = New System.Drawing.Size(173, 20)
+        Me.SearchBox.Size = New System.Drawing.Size(258, 26)
         Me.SearchBox.TabIndex = 1
         Me.SearchBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -76,10 +75,9 @@ Partial Class Form1
         Me.Panel1.Controls.Add(Me.MovieDetailsPanel)
         Me.Panel1.Controls.Add(Me.SearchBox)
         Me.Panel1.Controls.Add(Me.Button1)
-        Me.Panel1.Location = New System.Drawing.Point(1060, 0)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
+        Me.Panel1.Location = New System.Drawing.Point(1590, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(246, 797)
+        Me.Panel1.Size = New System.Drawing.Size(369, 1226)
         Me.Panel1.TabIndex = 2
         '
         'MovieDetailsPanel
@@ -97,19 +95,17 @@ Partial Class Form1
         Me.MovieDetailsPanel.Controls.Add(Me.MovieImageBox)
         Me.MovieDetailsPanel.Controls.Add(Me.MovieTitleLabel)
         Me.MovieDetailsPanel.Controls.Add(Me.StartMovieButton)
-        Me.MovieDetailsPanel.Location = New System.Drawing.Point(11, 38)
-        Me.MovieDetailsPanel.Margin = New System.Windows.Forms.Padding(2)
+        Me.MovieDetailsPanel.Location = New System.Drawing.Point(16, 58)
         Me.MovieDetailsPanel.Name = "MovieDetailsPanel"
-        Me.MovieDetailsPanel.Size = New System.Drawing.Size(229, 750)
+        Me.MovieDetailsPanel.Size = New System.Drawing.Size(344, 1154)
         Me.MovieDetailsPanel.TabIndex = 2
         '
         'deleteBTN
         '
         Me.deleteBTN.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.deleteBTN.Location = New System.Drawing.Point(169, 720)
-        Me.deleteBTN.Margin = New System.Windows.Forms.Padding(2)
+        Me.deleteBTN.Location = New System.Drawing.Point(254, 1108)
         Me.deleteBTN.Name = "deleteBTN"
-        Me.deleteBTN.Size = New System.Drawing.Size(50, 22)
+        Me.deleteBTN.Size = New System.Drawing.Size(75, 34)
         Me.deleteBTN.TabIndex = 9
         Me.deleteBTN.Text = "Delete"
         Me.deleteBTN.UseVisualStyleBackColor = True
@@ -118,10 +114,9 @@ Partial Class Form1
         'updateMovieDataBTN
         '
         Me.updateMovieDataBTN.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.updateMovieDataBTN.Location = New System.Drawing.Point(10, 720)
-        Me.updateMovieDataBTN.Margin = New System.Windows.Forms.Padding(2)
+        Me.updateMovieDataBTN.Location = New System.Drawing.Point(15, 1108)
         Me.updateMovieDataBTN.Name = "updateMovieDataBTN"
-        Me.updateMovieDataBTN.Size = New System.Drawing.Size(154, 22)
+        Me.updateMovieDataBTN.Size = New System.Drawing.Size(231, 34)
         Me.updateMovieDataBTN.TabIndex = 8
         Me.updateMovieDataBTN.Text = "Update Movie Data Manually"
         Me.updateMovieDataBTN.UseVisualStyleBackColor = True
@@ -131,10 +126,9 @@ Partial Class Form1
         '
         Me.SeriesItterationLabel.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.SeriesItterationLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.SeriesItterationLabel.Location = New System.Drawing.Point(7, 47)
-        Me.SeriesItterationLabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.SeriesItterationLabel.Location = New System.Drawing.Point(10, 72)
         Me.SeriesItterationLabel.Name = "SeriesItterationLabel"
-        Me.SeriesItterationLabel.Size = New System.Drawing.Size(212, 31)
+        Me.SeriesItterationLabel.Size = New System.Drawing.Size(318, 48)
         Me.SeriesItterationLabel.TabIndex = 7
         Me.SeriesItterationLabel.Text = "Series 0/0"
         Me.SeriesItterationLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -144,10 +138,9 @@ Partial Class Form1
         '
         Me.yearLabel.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.yearLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.yearLabel.Location = New System.Drawing.Point(6, 78)
-        Me.yearLabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.yearLabel.Location = New System.Drawing.Point(9, 120)
         Me.yearLabel.Name = "yearLabel"
-        Me.yearLabel.Size = New System.Drawing.Size(212, 21)
+        Me.yearLabel.Size = New System.Drawing.Size(318, 32)
         Me.yearLabel.TabIndex = 6
         Me.yearLabel.Text = "Movie Year / Genre"
         Me.yearLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -156,10 +149,9 @@ Partial Class Form1
         'RestartMovieButton
         '
         Me.RestartMovieButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.RestartMovieButton.Location = New System.Drawing.Point(112, 694)
-        Me.RestartMovieButton.Margin = New System.Windows.Forms.Padding(2)
+        Me.RestartMovieButton.Location = New System.Drawing.Point(168, 1068)
         Me.RestartMovieButton.Name = "RestartMovieButton"
-        Me.RestartMovieButton.Size = New System.Drawing.Size(107, 22)
+        Me.RestartMovieButton.Size = New System.Drawing.Size(160, 34)
         Me.RestartMovieButton.TabIndex = 5
         Me.RestartMovieButton.Text = "Restart Movie"
         Me.RestartMovieButton.UseVisualStyleBackColor = True
@@ -169,10 +161,9 @@ Partial Class Form1
         '
         Me.PlayCountLabel.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PlayCountLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.PlayCountLabel.Location = New System.Drawing.Point(6, 343)
-        Me.PlayCountLabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.PlayCountLabel.Location = New System.Drawing.Point(9, 528)
         Me.PlayCountLabel.Name = "PlayCountLabel"
-        Me.PlayCountLabel.Size = New System.Drawing.Size(212, 15)
+        Me.PlayCountLabel.Size = New System.Drawing.Size(318, 23)
         Me.PlayCountLabel.TabIndex = 4
         Me.PlayCountLabel.Text = "Play Count"
         Me.PlayCountLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -182,10 +173,9 @@ Partial Class Form1
         '
         Me.PlayPositionLabel.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PlayPositionLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.PlayPositionLabel.Location = New System.Drawing.Point(6, 321)
-        Me.PlayPositionLabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.PlayPositionLabel.Location = New System.Drawing.Point(9, 494)
         Me.PlayPositionLabel.Name = "PlayPositionLabel"
-        Me.PlayPositionLabel.Size = New System.Drawing.Size(212, 15)
+        Me.PlayPositionLabel.Size = New System.Drawing.Size(318, 23)
         Me.PlayPositionLabel.TabIndex = 3
         Me.PlayPositionLabel.Text = "Play Position"
         Me.PlayPositionLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -194,10 +184,9 @@ Partial Class Form1
         'MovieImageBox
         '
         Me.MovieImageBox.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.MovieImageBox.Location = New System.Drawing.Point(9, 101)
-        Me.MovieImageBox.Margin = New System.Windows.Forms.Padding(2)
+        Me.MovieImageBox.Location = New System.Drawing.Point(14, 155)
         Me.MovieImageBox.Name = "MovieImageBox"
-        Me.MovieImageBox.Size = New System.Drawing.Size(209, 218)
+        Me.MovieImageBox.Size = New System.Drawing.Size(314, 335)
         Me.MovieImageBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.MovieImageBox.TabIndex = 2
         Me.MovieImageBox.TabStop = False
@@ -206,10 +195,9 @@ Partial Class Form1
         '
         Me.MovieTitleLabel.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.MovieTitleLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.MovieTitleLabel.Location = New System.Drawing.Point(7, 10)
-        Me.MovieTitleLabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.MovieTitleLabel.Location = New System.Drawing.Point(10, 15)
         Me.MovieTitleLabel.Name = "MovieTitleLabel"
-        Me.MovieTitleLabel.Size = New System.Drawing.Size(212, 37)
+        Me.MovieTitleLabel.Size = New System.Drawing.Size(318, 57)
         Me.MovieTitleLabel.TabIndex = 1
         Me.MovieTitleLabel.Text = "Movie Title"
         Me.MovieTitleLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -218,10 +206,9 @@ Partial Class Form1
         'StartMovieButton
         '
         Me.StartMovieButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.StartMovieButton.Location = New System.Drawing.Point(9, 694)
-        Me.StartMovieButton.Margin = New System.Windows.Forms.Padding(2)
+        Me.StartMovieButton.Location = New System.Drawing.Point(14, 1068)
         Me.StartMovieButton.Name = "StartMovieButton"
-        Me.StartMovieButton.Size = New System.Drawing.Size(99, 22)
+        Me.StartMovieButton.Size = New System.Drawing.Size(148, 34)
         Me.StartMovieButton.TabIndex = 0
         Me.StartMovieButton.Text = "Start Movie"
         Me.StartMovieButton.UseVisualStyleBackColor = True
@@ -237,30 +224,28 @@ Partial Class Form1
         Me.MovieTreeList.FullRowSelect = True
         Me.MovieTreeList.HotTracking = True
         Me.MovieTreeList.Indent = 20
-        Me.MovieTreeList.Location = New System.Drawing.Point(1, 0)
-        Me.MovieTreeList.Margin = New System.Windows.Forms.Padding(2)
+        Me.MovieTreeList.Location = New System.Drawing.Point(2, 0)
         Me.MovieTreeList.Name = "MovieTreeList"
         Me.MovieTreeList.ShowNodeToolTips = True
-        Me.MovieTreeList.Size = New System.Drawing.Size(1065, 824)
+        Me.MovieTreeList.Size = New System.Drawing.Size(1596, 1266)
         Me.MovieTreeList.TabIndex = 3
         '
         'Button2
         '
         Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button2.Location = New System.Drawing.Point(1071, 794)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(2)
+        Me.Button2.Location = New System.Drawing.Point(1606, 1222)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(103, 22)
+        Me.Button2.Size = New System.Drawing.Size(154, 34)
         Me.Button2.TabIndex = 4
         Me.Button2.Text = "Update Movie List"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'SearchBackButton
         '
-        Me.SearchBackButton.Location = New System.Drawing.Point(990, 794)
-        Me.SearchBackButton.Margin = New System.Windows.Forms.Padding(2)
+        Me.SearchBackButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.SearchBackButton.Location = New System.Drawing.Point(1452, 1221)
         Me.SearchBackButton.Name = "SearchBackButton"
-        Me.SearchBackButton.Size = New System.Drawing.Size(65, 21)
+        Me.SearchBackButton.Size = New System.Drawing.Size(98, 32)
         Me.SearchBackButton.TabIndex = 7
         Me.SearchBackButton.Text = "Go Back"
         Me.SearchBackButton.UseVisualStyleBackColor = True
@@ -269,31 +254,40 @@ Partial Class Form1
         'AddMovieFile
         '
         Me.AddMovieFile.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.AddMovieFile.Location = New System.Drawing.Point(1193, 793)
-        Me.AddMovieFile.Margin = New System.Windows.Forms.Padding(2)
+        Me.AddMovieFile.Location = New System.Drawing.Point(1790, 1220)
         Me.AddMovieFile.Name = "AddMovieFile"
-        Me.AddMovieFile.Size = New System.Drawing.Size(103, 22)
+        Me.AddMovieFile.Size = New System.Drawing.Size(154, 34)
         Me.AddMovieFile.TabIndex = 8
         Me.AddMovieFile.Text = "Add Movie File"
         Me.AddMovieFile.UseVisualStyleBackColor = True
         '
+        'TreeListData
+        '
+        Me.TreeListData.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TreeListData.BackColor = System.Drawing.Color.Gainsboro
+        Me.TreeListData.Location = New System.Drawing.Point(1359, 22)
+        Me.TreeListData.Name = "TreeListData"
+        Me.TreeListData.Size = New System.Drawing.Size(191, 73)
+        Me.TreeListData.TabIndex = 9
+        Me.TreeListData.Text = "null"
+        '
         'Form1
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Silver
-        Me.ClientSize = New System.Drawing.Size(1307, 824)
+        Me.ClientSize = New System.Drawing.Size(1960, 1268)
+        Me.Controls.Add(Me.TreeListData)
         Me.Controls.Add(Me.AddMovieFile)
         Me.Controls.Add(Me.SearchBackButton)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.MovieTreeList)
         Me.Controls.Add(Me.Panel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(2)
-        Me.MinimumSize = New System.Drawing.Size(859, 540)
+        Me.MinimumSize = New System.Drawing.Size(1278, 801)
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Bryce Hahn's Movie Browser"
+        Me.Text = "Movie Browser PC"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.MovieDetailsPanel.ResumeLayout(False)
@@ -319,5 +313,6 @@ Partial Class Form1
     Friend WithEvents SeriesItterationLabel As System.Windows.Forms.Label
     Friend WithEvents updateMovieDataBTN As System.Windows.Forms.Button
     Friend WithEvents deleteBTN As System.Windows.Forms.Button
+    Friend WithEvents TreeListData As System.Windows.Forms.Label
 
 End Class

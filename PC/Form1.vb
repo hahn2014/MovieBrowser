@@ -7,6 +7,9 @@ Imports System.Text.RegularExpressions
 
 Public Class Form1
     Dim selectedMovie As TreeNode
+
+    Dim searchResults As Integer = 0
+    Dim TreeListGB As Long = 0
     Public locationForData As String = "C:\Users\" + Environment.UserName + "\AppData\Local\MovieBrowser\MovieData\"
 
     Public genres As String() = {"action", "adventure", "animation", "biography", "comedy", "crime", "documentary", "drama", "family", "fantasy", "history", "horror", "musical", "mystery", "romance", "sci-fi", "science fiction", "sport", "thriller", "war", "western"}
@@ -45,6 +48,13 @@ Public Class Form1
                         fileNode = parentNode.Nodes.Add(IO.Path.GetFileName(file))
                         fileNode.Tag = file
                         fileNode.Text = IO.Path.GetFileName(file)
+                        searchResults += 1
+                        Dim loc As String = getMovieFileFromDataFile(file)
+                        If Not (loc = "null") Then
+                            Dim infoReader As System.IO.FileInfo
+                            infoReader = My.Computer.FileSystem.GetFileInfo(loc)
+                            TreeListGB += infoReader.Length
+                        End If
                     End If
                 Next
             End If
@@ -66,6 +76,9 @@ Public Class Form1
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        searchResults = 0
+        TreeListGB = 0
+        TreeListData.Text = ""
         'search throught the list for movies, genres, qualities, years, extensions, ect...
         If Not (SearchBox.Text = "") Then
             'textbox is not empty, lets search for the title, date, quality, or filetype
@@ -98,6 +111,7 @@ Public Class Form1
                 SearchMoviesForKeyword(text, 5)
             End If
             SearchMoviesForKeyword(SearchBox.Text, 3)
+            updateTreeListDataLabel()
         End If
     End Sub
 
@@ -133,8 +147,14 @@ Public Class Form1
         If (files.Count >= 1) Then
             root.Text = "Results For " + keyword + " Query"
             For Each File In files
-                Console.WriteLine(File)
                 node = MovieTreeList.Nodes(0).Nodes.Add(IO.Path.GetFileName(File))
+                searchResults += 1
+                Dim loc As String = getMovieFileFromDataFile(File)
+                If Not (loc = "null") Then
+                    Dim infoReader As System.IO.FileInfo
+                    infoReader = My.Computer.FileSystem.GetFileInfo(loc)
+                    TreeListGB += infoReader.Length
+                End If
                 node.Tag = File
                 node.Text = IO.Path.GetFileName(File)
                 'MovieTreeList.Nodes(0).Nodes.Add(node)
@@ -145,9 +165,13 @@ Public Class Form1
         Else
             root.Text = "No Results Were Found For " + keyword + " Query"
         End If
+        Console.WriteLine("Search Completed. There were " + searchResults.ToString() + " results for the query " + keyword.ToString())
     End Sub
 
     Public Sub CallTreeUpdate()
+        TreeListData.Text = ""
+        TreeListGB = 0
+        searchResults = 0
         MovieTreeList.Nodes.Clear()
         Dim rootDir As String = locationForData
         'Add this drive as a root node
@@ -160,6 +184,7 @@ Public Class Form1
         MovieTreeList.ExpandAll()
         MovieTreeList.SelectedNode = MovieTreeList.Nodes(0)
         MovieTreeList.Select()
+        updateTreeListDataLabel()
     End Sub
 
     Public Sub CallClearTree()
@@ -397,4 +422,30 @@ Public Class Form1
         SeriesItterationLabel.Visible = False
         MovieImageBox.Image = Nothing
     End Sub
+
+    Private Sub updateTreeListDataLabel()
+        If (searchResults > 0) Then
+            If (searchResults = 1) Then
+                TreeListData.Text = (Math.Round((TreeListGB / 1073741824), 2, MidpointRounding.AwayFromZero)).ToString() + " GB" + vbNewLine + "1 result"
+            Else
+                TreeListData.Text = (Math.Round((TreeListGB / 1073741824), 2, MidpointRounding.AwayFromZero)).ToString() + " GB" + vbNewLine + searchResults.ToString() + " results"
+            End If
+        Else
+            TreeListData.Text = ""
+        End If
+    End Sub
+
+    Private Function getMovieFileFromDataFile(ByVal a As String) As String
+        Dim reader As New System.IO.StreamReader(a)
+        Dim allLines As List(Of String) = New List(Of String)
+        Do While Not reader.EndOfStream
+            allLines.Add(reader.ReadLine())
+        Loop
+        reader.Close()
+        If Not (allLines(0).StartsWith("$")) Then
+            Return allLines(0)
+        Else
+            Return "null"
+        End If
+    End Function
 End Class
