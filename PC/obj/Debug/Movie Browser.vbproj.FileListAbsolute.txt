@@ -24,3 +24,4 @@ C:\Users\Bryce\Desktop\Movie Browser\Movie Browser\obj\Debug\Movie Browser.vbpro
 C:\Users\Bryce\Desktop\Movie Browser\Movie Browser\obj\Debug\Movie_Browser.AddMovie.resources
 C:\Users\Bryce\Desktop\Movie Browser\Movie Browser\obj\Debug\Movie_Browser.UpdateData.resources
 C:\Users\Bryce\Desktop\Movie Browser\Movie Browser\obj\Debug\Movie_Browser.AutoUpdate.resources
+C:\Users\Bryce\Desktop\Movie Browser\Movie Browser\obj\Debug\Movie_Browser.SplashScreen.resources

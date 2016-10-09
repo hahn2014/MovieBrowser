@@ -14,7 +14,7 @@ Public Class Form1
 
     Public genres As String() = {"action", "adventure", "animation", "biography", "comedy", "crime", "documentary", "drama", "family", "fantasy", "history", "horror", "musical", "mystery", "romance", "sci-fi", "science fiction", "sport", "thriller", "war", "western"}
 
-    Public BUILD As String = "1.22"
+    Public BUILD As String = "1.25"
     Public UPDBuild As String = ""
 
     Dim curMovieURL As String = ""
