@@ -33,6 +33,7 @@ Public Class AutoUpdate
     End Sub
 
     Private Sub AutoUpdate_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.TopMost = True
         UpdateText.Text = "We found an update available online. It is highly recommended to update. Bringing new features and stability improvements and bug fixes, new updates are the best way to enjoy Movie Browser PC." + vbNewLine + vbNewLine +
             "Current Version: " + Form1.BUILD + " -- Update Available: " + Form1.UPDBuild
     End Sub
@@ -43,6 +44,7 @@ Public Class AutoUpdate
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Later.Click
+        Form1.Enabled = True
         Me.Dispose()
     End Sub
 
@@ -57,10 +59,11 @@ Public Class AutoUpdate
     End Sub
 
     Public Sub removeOldFilesOnStartup(ByVal a As String)
-        Console.WriteLine("removing old version " + a)
         a = a.Substring(8, a.Length - 8)
+        Console.WriteLine("Removing version " + a)
         Try
             My.Computer.FileSystem.DeleteFile(fileDownloadPath + "Movie Browser " + a + ".exe")
+            Console.WriteLine("success!")
         Catch
             Console.WriteLine("couldn't find file " + fileDownloadPath + "Movie Browser " + a + ".exe")
         End Try

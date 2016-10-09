@@ -14,7 +14,7 @@ Public Class Form1
 
     Public genres As String() = {"action", "adventure", "animation", "biography", "comedy", "crime", "documentary", "drama", "family", "fantasy", "history", "horror", "musical", "mystery", "romance", "sci-fi", "science fiction", "sport", "thriller", "war", "western"}
 
-    Public BUILD As String = "1.23"
+    Public BUILD As String = "1.22"
     Public UPDBuild As String = ""
 
     Dim curMovieURL As String = ""
@@ -462,6 +462,7 @@ Public Class Form1
     End Function
 
     Private Sub checkForUpdate()
+        AutoUpdate.removeOldFilesOnStartup("-updateF1.22")
         Dim address As String = "https://raw.githubusercontent.com/hahn2014/MovieBrowser/master/.autoupdate"
         Dim client As WebClient = New WebClient()
         Dim t As String = ""
@@ -496,6 +497,7 @@ Public Class Form1
                 End If
                 If (needsUpdate) Then
                     Console.WriteLine("There is a new update available! local version: " + BUILD + ", online version: " + version)
+                    Me.Enabled = False
                     AutoUpdate.Show()
                 Else
                     Console.WriteLine("There is an older update available... local version: " + BUILD + ", online version: " + version)
