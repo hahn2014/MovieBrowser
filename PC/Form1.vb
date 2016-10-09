@@ -14,7 +14,8 @@ Public Class Form1
 
     Public genres As String() = {"action", "adventure", "animation", "biography", "comedy", "crime", "documentary", "drama", "family", "fantasy", "history", "horror", "musical", "mystery", "romance", "sci-fi", "science fiction", "sport", "thriller", "war", "western"}
 
-    Private BUILD As String = "1.22"
+    Public BUILD As String = "1.23"
+    Public UPDBuild As String = ""
 
     Dim curMovieURL As String = ""
     Dim curMovieTime As String = ""
@@ -257,6 +258,13 @@ Public Class Form1
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'check for environment vars to see if application was updated
+        If Environment.GetCommandLineArgs.Count <> 1 Then
+            If Environment.GetCommandLineArgs(1).StartsWith("-updatedF") Then
+                AutoUpdate.removeOldFilesOnStartup(Environment.GetCommandLineArgs(1))
+            End If
+        End If
+
         Button2.PerformClick()
         Me.Text = "Movie Browser PC - Version " + BUILD
         checkForUpdate()
@@ -456,22 +464,43 @@ Public Class Form1
     Private Sub checkForUpdate()
         Dim address As String = "https://raw.githubusercontent.com/hahn2014/MovieBrowser/master/.autoupdate"
         Dim client As WebClient = New WebClient()
+        Dim t As String = ""
         Try
             Dim reader As StreamReader = New StreamReader(client.OpenRead(address))
-            Dim text = reader.ReadToEnd
+            t = reader.ReadToEnd
             reader.Close()
-            Console.WriteLine(text)
-            If (text.StartsWith("PC")) Then
-                Dim version = text.Substring(1, text.Length - 2)
-                Console.WriteLine("Online Version = " + version)
-                If (BUILD = version) Then
-                    Console.WriteLine("We are up to date")
-                Else
-                    Console.WriteLine("There is a new update available! current version: " + BUILD + ", new version: " + version)
-                End If
-            End If
         Catch
             Console.WriteLine("We couldnt find the update file????")
         End Try
+        If (t.StartsWith("PC")) Then
+            Dim version = t.Substring(2, t.Length - 2)
+            UPDBuild = version
+            If (BUILD = version) Then
+            Else
+                'test if it is higher or lower.. should never be higher but ya never know what people are doing with my code ;P
+                Dim onlineRelease As Integer = Convert.ToInt32(version.Substring(0, 1))
+                Dim onlineBuild As Integer = Convert.ToInt32(version.Substring(2, 2))
+                Dim localRelease As Integer = Convert.ToInt32(BUILD.Substring(0, 1))
+                Dim localBuild As Integer = Convert.ToInt32(BUILD.Substring(2, 2))
+
+                Dim needsUpdate = False
+                If (localRelease < onlineRelease) Then
+                    'we are behind on a release, definitely update!
+                    needsUpdate = True
+                Else
+                    If (localBuild < onlineBuild) Then
+                        needsUpdate = True
+                    Else
+                        needsUpdate = False
+                    End If
+                End If
+                If (needsUpdate) Then
+                    Console.WriteLine("There is a new update available! local version: " + BUILD + ", online version: " + version)
+                    AutoUpdate.Show()
+                Else
+                    Console.WriteLine("There is an older update available... local version: " + BUILD + ", online version: " + version)
+                End If
+            End If
+        End If
     End Sub
 End Class

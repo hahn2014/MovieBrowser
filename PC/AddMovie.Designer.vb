@@ -72,7 +72,7 @@ Partial Class AddMovie
         '
         Me.addMovieBTN.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.addMovieBTN.Enabled = False
-        Me.addMovieBTN.Location = New System.Drawing.Point(833, 226)
+        Me.addMovieBTN.Location = New System.Drawing.Point(833, 225)
         Me.addMovieBTN.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.addMovieBTN.Name = "addMovieBTN"
         Me.addMovieBTN.Size = New System.Drawing.Size(112, 35)
@@ -83,7 +83,7 @@ Partial Class AddMovie
         'Button2
         '
         Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button2.Location = New System.Drawing.Point(955, 226)
+        Me.Button2.Location = New System.Drawing.Point(955, 225)
         Me.Button2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(112, 35)
@@ -119,7 +119,7 @@ Partial Class AddMovie
         Me.detailsPanel.Location = New System.Drawing.Point(20, 66)
         Me.detailsPanel.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.detailsPanel.Name = "detailsPanel"
-        Me.detailsPanel.Size = New System.Drawing.Size(1047, 159)
+        Me.detailsPanel.Size = New System.Drawing.Size(1047, 160)
         Me.detailsPanel.TabIndex = 4
         '
         'imdbIDBox

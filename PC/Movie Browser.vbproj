@@ -74,6 +74,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression.FileSystem" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -101,6 +102,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="AutoUpdate.Designer.vb">
+      <DependentUpon>AutoUpdate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AutoUpdate.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +149,9 @@
   <ItemGroup>
     <EmbeddedResource Include="AddMovie.resx">
       <DependentUpon>AddMovie.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AutoUpdate.resx">
+      <DependentUpon>AutoUpdate.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
